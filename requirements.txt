@@ -5,3 +5,6 @@ langchain
 langchain-community
 pypdf
 beautifulsoup4
+yt_dlp
+pydub
+faster-whisper
