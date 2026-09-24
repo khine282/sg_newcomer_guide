@@ -1,0 +1,18 @@
+pdfs:
+  - file: cpf_contributions_guide.pdf
+    url: https://www.cpf.gov.sg/content/dam/web/member/infohub/documents/Brochure_MakingCPFContributionsCorrectlyAndPromptly.pdf
+    topic: cpf
+    agency: CPF Board
+    last_checked: "2026-09"
+
+  - file: mom_foreign_workers_guide.pdf
+    url: https://www.mom.gov.sg/-/media/mom/documents/statistics-publications/a-guide-for-foreign-workers-english-malay.pdf
+    topic: work
+    agency: MOM
+    last_checked: "2026-09"
+
+  - file: mom_workright_employment_laws.pdf
+    url: https://www.mom.gov.sg/-/media/mom/documents/employment-practices/workright/workright-guide-employment-laws.pdf
+    topic: work
+    agency: MOM
+    last_checked: "2026-09"
