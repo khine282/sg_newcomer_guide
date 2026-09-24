@@ -28,11 +28,6 @@ web:
     agency: LTA
     last_checked: "2026-09"
 
-  - url: https://www.hdb.gov.sg/cs/infoweb/business/estate-agents-and-salespersons/renting-a-flat/eligibility
-    topic: housing
-    agency: HDB
-    last_checked: "2026-09"
-
   - url: https://www.cea.gov.sg/consumers/transacting-on-your-own/renting-an-hdb-flat-or-bedroom
     topic: housing
     agency: CEA
