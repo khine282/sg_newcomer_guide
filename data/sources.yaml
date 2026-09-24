@@ -42,3 +42,16 @@ web:
     topic: healthcare
     agency: SingHealth Polyclinics
     last_checked: "2026-09"
+
+videos:
+  - id: cpf_video_1
+    url: https://www.youtube.com/watch?v=QQ16ojXd3GY
+    topic: cpf
+    agency: CPF Board
+    last_checked: "2026-09"
+
+  - id: cpf_video_2
+    url: https://www.youtube.com/watch?v=0UpTDfLjMnc
+    topic: cpf
+    agency: CPF Board
+    last_checked: "2026-09"
