@@ -16,3 +16,29 @@ pdfs:
     topic: work
     agency: MOM
     last_checked: "2026-09"
+
+web:
+  - url: https://www.cpf.gov.sg/member/infohub/educational-resources/your-complete-guide-to-financial-planning-as-you-join-the-workforce
+    topic: cpf
+    agency: CPF Board
+    last_checked: "2026-09"
+
+  - url: https://www.lta.gov.sg/content/ltagov/en/getting_around/public_transport/plan_your_journey.html
+    topic: transport
+    agency: LTA
+    last_checked: "2026-09"
+
+  - url: https://www.hdb.gov.sg/residential/renting-a-flat/renting-from-the-open-market/eligibility
+    topic: housing
+    agency: HDB
+    last_checked: "2026-09"
+
+  - url: https://www.cea.gov.sg/consumers/transacting-on-your-own/renting-an-hdb-flat-or-bedroom
+    topic: housing
+    agency: CEA
+    last_checked: "2026-09"
+
+  - url: https://polyclinic.singhealth.com.sg/clinic-visit/charges-and-payment
+    topic: healthcare
+    agency: SingHealth Polyclinics
+    last_checked: "2026-09"
