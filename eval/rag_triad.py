@@ -115,7 +115,20 @@ def evaluate(chain, name):
     return rows
 
 
+def get_retriever(name):
+    if name == "baseline":
+        return None  # the QA chain's default MMR retriever
+    if name == "sentence_window":
+        from rag.sentence_window import get_sentence_window_retriever
+        return get_sentence_window_retriever()
+    raise ValueError(f"Unknown retriever: {name}")
+
+
 if __name__ == "__main__":
+    import sys
+
     from rag.qa import get_qa_chain
 
-    evaluate(get_qa_chain(), "baseline")
+    # Usage: python -m eval.rag_triad [baseline|sentence_window]
+    name = sys.argv[1] if len(sys.argv) > 1 else "baseline"
+    evaluate(get_qa_chain(get_retriever(name)), name)
