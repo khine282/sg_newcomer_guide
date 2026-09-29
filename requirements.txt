@@ -10,3 +10,4 @@ pydub
 faster-whisper
 torchlangchain-chroma
 langchain-google-genai
+lark
