@@ -1,0 +1,52 @@
+pdfs:
+  - file: cpf_contributions_guide.pdf
+    url: https://www.cpf.gov.sg/content/dam/web/member/infohub/documents/Brochure_MakingCPFContributionsCorrectlyAndPromptly.pdf
+    topic: cpf
+    agency: CPF Board
+    last_checked: "2026-09"
+
+  - file: mom_foreign_workers_guide.pdf
+    url: https://www.mom.gov.sg/-/media/mom/documents/statistics-publications/a-guide-for-foreign-workers-english-malay.pdf
+    topic: work
+    agency: MOM
+    last_checked: "2026-09"
+
+  - file: mom_workright_employment_laws.pdf
+    url: https://www.mom.gov.sg/-/media/mom/documents/employment-practices/workright/workright-guide-employment-laws.pdf
+    topic: work
+    agency: MOM
+    last_checked: "2026-09"
+
+web:
+  - url: https://www.cpf.gov.sg/member/infohub/educational-resources/your-complete-guide-to-financial-planning-as-you-join-the-workforce
+    topic: cpf
+    agency: CPF Board
+    last_checked: "2026-09"
+
+  - url: https://www.lta.gov.sg/content/ltagov/en/getting_around/public_transport/plan_your_journey.html
+    topic: transport
+    agency: LTA
+    last_checked: "2026-09"
+
+  - url: https://www.cea.gov.sg/consumers/transacting-on-your-own/renting-an-hdb-flat-or-bedroom
+    topic: housing
+    agency: CEA
+    last_checked: "2026-09"
+
+  - url: https://polyclinic.singhealth.com.sg/clinic-visit/charges-and-payment
+    topic: healthcare
+    agency: SingHealth Polyclinics
+    last_checked: "2026-09"
+
+videos:
+  - id: cpf_video_1
+    url: https://www.youtube.com/watch?v=Gwi0H-Byn88
+    topic: cpf
+    agency: CPF Board
+    last_checked: "2026-09"
+
+  - id: cpf_video_2
+    url: https://www.youtube.com/watch?v=0UpTDfLjMnc
+    topic: cpf
+    agency: CPF Board
+    last_checked: "2026-09"
