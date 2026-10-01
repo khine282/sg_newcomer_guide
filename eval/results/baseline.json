@@ -1,0 +1,170 @@
+[
+  {
+    "topic": "work",
+    "question": "How much annual leave do employees get?",
+    "answer": "If you have worked for your employer for at least 3 months, you are entitled to paid annual leave. \n\nIf you have worked for at least 3 months but less than a year, your leave is pro-rated based on the full months worked.\n\nYour annual leave entitlement increases with your years of continuous service:\n* **1 year:** 7 days\n* **2 years:** 8 days\n* **3 years:** 9 days\n* **4 years:** 10 days\n* **5 years:** 11 days\n* **6 years:** 12 days\n* **7 years:** 13 days\n* **8 years and thereafter:** 14 days\n\n**Source:**\n* MOM: https://www.mom.gov.sg/-/media/mom/documents/employment-practices/workright/workright-guide-employment-laws.pdf",
+    "chunk_ids": [
+      35,
+      80,
+      9,
+      23
+    ],
+    "answer_relevance": 1.0,
+    "context_relevance": 0.25,
+    "groundedness": 1.0
+  },
+  {
+    "topic": "work",
+    "question": "How many hours a week can I be asked to work?",
+    "answer": "Your contractual working hours (excluding breaks and overtime) cannot exceed **44 hours a week** (or 8 hours a day). \n\nIf you are required to work more than 44 hours in a week, those extra hours are considered overtime and must be paid at 1.5 times your basic hourly rate.\n\n**Source:**\n* MOM: https://www.mom.gov.sg/-/media/mom/documents/employment-practices/workright/workright-guide-employment-laws.pdf",
+    "chunk_ids": [
+      16,
+      52,
+      124,
+      83
+    ],
+    "answer_relevance": 1.0,
+    "context_relevance": 0.25,
+    "groundedness": 1.0
+  },
+  {
+    "topic": "work",
+    "question": "When must my employer pay my salary?",
+    "answer": "Your salary must be paid at least once a month according to the following deadlines:\n\n* **Regular Salary:** Within 7 days after the end of the salary period.\n* **Overtime Pay:** Within 14 days after the end of the salary period.\n\n**For Final Salary (End of Employment):**\n* **Resign with notice / Employer terminates contract:** On your last day of employment.\n* **Resign without notice:** Within 7 days of your last day of employment.\n* **Dismissed for misconduct:** On your last day of employment (or within 3 working days from the dismissal date if that is not possible).\n\n**Sources:**\n* Ministry of Manpower (MOM): https://www.mom.gov.sg/-/media/mom/documents/employment-practices/workright/workright-guide-employment-laws.pdf",
+    "chunk_ids": [
+      19,
+      1,
+      41,
+      24
+    ],
+    "answer_relevance": 1.0,
+    "context_relevance": 0.25,
+    "groundedness": 1.0
+  },
+  {
+    "topic": "cpf",
+    "question": "What happens if my employer does not pay CPF contributions?",
+    "answer": "If an employer does not pay or fails to promptly pay CPF contributions, the government can take enforcement action. The employer will:\n\n* **Incur late payment interest:** 1.5% per month (minimum $5) on the outstanding amount.\n* **Pay a composition amount:** Up to $1,000 per offence.\n* **Lose the right** to recover the employee’s share of contributions.\n* **Face court prosecution:**\n  * **First-time offenders:** Fined between $1,000 and $5,000 per offence, and/or face up to 6 months of imprisonment.\n  * **Repeat offenders:** Fined between $2,000 and $10,000 per offence, and/or face up to 12 months of imprisonment.\n  * **Company directors** can also be prosecuted.\n\n**Sources:**\n* CPF Board: https://www.cpf.gov.sg/content/dam/web/member/infohub/documents/Brochure_MakingCPFContributionsCorrectlyAndPromptly.pdf\n* MOM: https://www.mom.gov.sg/-/media/mom/documents/employment-practices/workright/workright-guide-employment-laws.pdf",
+    "chunk_ids": [
+      3,
+      5,
+      49,
+      140
+    ],
+    "answer_relevance": 1.0,
+    "context_relevance": 0.25,
+    "groundedness": 1.0
+  },
+  {
+    "topic": "transport",
+    "question": "How can I pay for bus and MRT rides?",
+    "answer": "You can pay for bus and MRT/LRT rides using the following payment methods:\n\n* **Contactless bank cards** (credit or debit cards)\n* **Mobile wallets**\n* **Stored value cards** (SimplyGo EZ-Link Cards, NETS Prepaid Cards, EZ-Link and NETS FlashPay Cards)\n* **Concession cards** (SimplyGo Concession Cards)\n* **Cash** (for buses)\n\n*Note:* Children travel for free if they are below 0.9m in height and accompanied by a fare-paying commuter, or if they use a Child concession card.\n\n**Sources:**\n* LTA: https://www.lta.gov.sg/content/ltagov/en/getting_around/public_transport/plan_your_journey.html",
+    "chunk_ids": [
+      148,
+      170,
+      161,
+      188
+    ],
+    "answer_relevance": 1.0,
+    "context_relevance": 0.25,
+    "groundedness": 1.0
+  },
+  {
+    "topic": "housing",
+    "question": "Can a foreigner rent an HDB flat?",
+    "answer": "Yes, foreigners (non-citizens) can rent an HDB flat or room, subject to eligibility criteria:\n\n* **Valid Pass:** Non-citizens need a valid pass, such as an Employment Pass, S Pass, Work Permit, Student Pass, Dependant Pass, or Long-Term Visit Pass *(Note: Based on personal experience)*.\n* **Non-Citizen Quota:** Rentals for non-Malaysian non-citizens are subject to a Non-Citizen Quota of 8% at the neighbourhood level and 11% at the block level.\n* **Rental Period:** The minimum rental period is 6 months. Non-Malaysian non-citizens can rent for a maximum of 2 years per approval.\n\n**Sources:**\n* CEA: https://www.cea.gov.sg/consumers/transacting-on-your-own/renting-an-hdb-flat-or-bedroom\n* Personal experience (Notion)",
+    "chunk_ids": [
+      163,
+      185,
+      165,
+      9
+    ],
+    "answer_relevance": 1.0,
+    "context_relevance": 0.75,
+    "groundedness": 1.0
+  },
+  {
+    "topic": "healthcare",
+    "question": "How much does a consultation at a polyclinic cost?",
+    "answer": "The cost of a medical consultation at a polyclinic depends on your residency status:\n\n* **Singapore Citizen:** $18.50\n* **Child / Elderly (Citizen):** $8.50 *(Child below 18 years old, Elderly aged 65 and above)*\n* **Permanent Resident:** $37.50\n* **Non-Resident:** $85.35\n\n**Sources:**\n* SingHealth Polyclinics (https://polyclinic.singhealth.com.sg/clinic-visit/charges-and-payment)",
+    "chunk_ids": [
+      186,
+      168,
+      170,
+      99
+    ],
+    "answer_relevance": 1.0,
+    "context_relevance": 0.75,
+    "groundedness": 1.0
+  },
+  {
+    "topic": "tips",
+    "question": "စင်ကာပူမှာ ဘဏ်အကောင့် ဘယ်လိုဖွင့်ရမလဲ",
+    "answer": "စင်ကာပူတွင် ဘဏ်အကောင့်ဖွင့်ရန် လိုအပ်သော အချက်များမှာ အောက်ပါအတိုင်း ဖြစ်ပါသည်-\n\n* **လိုအပ်သော စာရွက်စာတမ်းများ:** သင်၏ နိုင်ငံကူးလက်မှတ် (passport)၊ Pass (ဗီဇာ/ပါမစ်) နှင့် စင်ကာပူ လိပ်စာအထောက်အထား (proof of address) တို့ လိုအပ်ပါသည်။\n* **ဖွင့်လှစ်ပုံ နည်းလမ်း:** အချို့သော ဘဏ်များတွင် Pass ကိုင်ဆောင်ထားသူများအတွက် မိုဘိုင်းအက်ပ် (mobile app) မှတစ်ဆင့် အကောင့်ဖွင့်နိုင်ပြီး အချို့ဘဏ်များတွင်မူ ဘဏ်ခွဲသို့ လူကိုယ်တိုင် သွားရောက်ရန် လိုအပ်ပါသည်။\n* **အကြံပြုချက်:** ဘဏ်မရွေးချယ်မီ အနည်းဆုံး ထားရှိရမည့် လက်ကျန်ငွေ (minimum balance) သို့မဟုတ် လစဉ်ကြေး (monthly fee) ရှိမရှိ ကြိုတင်မေးမြန်းပါ။\n\n**ရင်းမြစ် (Sources):**\n* personal (notion) *(ကိုယ်ပိုင်အတွေ့အကြုံမှ လမ်းညွှန်ချက်များဖြစ်ပြီး တရားဝင် ထုတ်ပြန်ချက် မဟုတ်ပါ)*",
+    "chunk_ids": [
+      184,
+      147,
+      6,
+      60
+    ],
+    "answer_relevance": 0.9,
+    "context_relevance": 0.25,
+    "groundedness": 1.0
+  },
+  {
+    "topic": "cpf",
+    "question": "CPF ဆိုတာ ဘာလဲ",
+    "answer": "ပေးထားသော အချက်အလက်များအရ CPF ဆိုသည်မှာ စင်ကာပူနိုင်ငံသားများ သို့မဟုတ် စင်ကာပူ အမြဲတမ်းနေထိုင်ခွင့် (PR) ရရှိထားသူ ဝန်ထမ်းများအတွက် ထည့်ဝင်ရသည့် စုဆောင်းငွေစနစ် ဖြစ်ပါသည်။ \n\n**အဓိကအချက်များ -**\n* **မည်သည့်လစာများမှ ထည့်ဝင်ရသလဲ -** အခြေခံလစာ၊ အချိန်ပိုကြေး (OT)၊ ဘောနပ်စ်၊ ထောက်ပံ့ကြေး (ဥပမာ- စားစရိတ်)၊ ကော်မရှင်နှင့် ငွေသားမက်လုံးများပေါ်တွင် အခြေခံ၍ CPF ထည့်ဝင်ရပါသည်။ (အလုပ်မှရပ်နားကြေး၊ ကုန်ကျစရိတ်ပြန်လည်ထုတ်ယူမှုများနှင့် ငွေသားမဟုတ်သော ပစ္စည်းလက်ဆောင်များမှ CPF ထည့်ဝင်ရန် မလိုပါ)။\n* **အတိုးနှုန်းနှင့် အာမခံချက် -** သင့် CPF စုဆောင်းငွေများကို စင်ကာပူအစိုးရမှ အပြည့်အဝအာမခံထားသော အထူးအစိုးရစက္ကူစာချုပ်များ (SSGS) တွင် ရင်းနှီးမြှုပ်နှံပေးပါသည်။ အသက် ၅၅ နှစ်အောက် ဝန်ထမ်းများအတွက် တစ်နှစ်လျှင် စုစုပေါင်း အတိုးနှုန်း ၅% အထိ ရရှိနိုင်ပါသည်။\n* **ပေးသွင်းရန် ရက်စွဲ -** အလုပ်ရှင်များသည် ပြက္ခဒိန်လ၏ နောက်ဆုံးရက်တွင် CPF ပေးသွင်းရန် တာဝန်ရှိပြီး နောက်လ ၁၄ ရက်နေ့ထက် နောက်မကျဘဲ ပေးသွင်းရပါမည်။\n\nပိုမိုပြည့်စုံသော အချက်အလက်များကို သိရှိလိုပါက တရားဝင်အေဂျင်စီ ဝဘ်ဆိုက်ဖြစ်သော [cpf.gov.sg](https://www.cpf.gov.sg) တွင် ဝင်ရောက်ကြည့်ရှုနိုင်ပါသည်။\n\n---\n**Sources:**\n* MOM: https://www.mom.gov.sg/-/media/mom/documents/employment-practices/workright/workright-guide-employment-laws.pdf\n* CPF Board: https://www.cpf.gov.sg/content/dam/web/member/infohub/documents/Brochure_MakingCPFContributionsCorrectlyAndPromptly.pdf\n* CPF Board: https://www.youtube.com/watch?v=Gwi0H-Byn88",
+    "chunk_ids": [
+      74,
+      145,
+      4,
+      171
+    ],
+    "answer_relevance": 1.0,
+    "context_relevance": 0.5,
+    "groundedness": 0.75
+  },
+  {
+    "topic": "housing",
+    "question": "HDB အိမ်ငှားဖို့ ဘာတွေလိုအပ်လဲ",
+    "answer": "HDB အိမ် သို့မဟုတ် အခန်းငှားရန် အောက်ပါလိုအပ်ချက်များနှင့် သတ်မှတ်ချက်များ ရှိပါသည်-\n\n* **တရားဝင်နေထိုင်ခွင့်ပါမစ် (Valid Pass):** စင်ကာပူနိုင်ငံသား သို့မဟုတ် PR မဟုတ်ပါက တရားဝင်ပါမစ် (ဥပမာ - Employment Pass, S Pass, Work Permit, Student Pass, Dependant Pass သို့မဟုတ် Long-Term Visit Pass) ရှိရပါမည်။\n* **ငှားရမ်းခွင့်ကာလ:** အနည်းဆုံး ၆ လ ငှားရမ်းရမည်ဖြစ်ပြီး၊ မလေးရှားနိုင်ငံသားမဟုတ်သော နိုင်ငံခြားသားများအတွက် တစ်ကြိမ်လျှင် အများဆုံး ၂ နှစ်အထိ ခွင့်ပြုပါသည်။\n* **Non-Citizen Quota:** မလေးရှားမဟုတ်သော နိုင်ငံခြားသားများအတွက် ရပ်ကွက်အဆင့် (၈%) နှင့် ဘလောက်အဆင့် (၁၁%) ကန့်သတ်ချက် (Quota) မပြည့်သေးသူဖြစ်ရပါမည်။\n* **အခြားသတိပြုရန်များ:**\n  * အိမ်မကြည့်ဘဲ သို့မဟုတ် စာချုပ်မချုပ်ဘဲ မည်သည့်ငွေမျှ ကြိုမလွှဲပါနှင့်။\n  * အေးဂျင့်နှင့် ဆောင်ရွက်ပါက CEA တွင် မှတ်ပုံတင်ထားသူ ဟုတ်/မဟုတ် စစ်ဆေးပါ။\n  * စာချုပ် (Tenancy Agreement) ကို သေချာဖတ်ပြီးမှ လက်မှတ်ထိုးပါ။\n\nSources:\n- personal (notion) - *(ကိုယ်ပိုင်အတွေ့အကြုံ အကြံပြုချက်ဖြစ်ပြီး တရားဝင်အချက်အလက် မဟုတ်ပါ)*\n- CEA: https://www.cea.gov.sg/consumers/transacting-on-your-own/renting-an-hdb-flat-or-bedroom",
+    "chunk_ids": [
+      185,
+      163,
+      165,
+      53
+    ],
+    "answer_relevance": 1.0,
+    "context_relevance": 0.75,
+    "groundedness": 1.0
+  },
+  {
+    "topic": "not_in_documents",
+    "question": "How do I apply for Singapore citizenship?",
+    "answer": "I don't know. The provided context does not contain information on how to apply for Singapore citizenship. \n\nPlease check the official agency website:\n* **ICA (Immigration & Checkpoints Authority):** https://www.ica.gov.sg\n\n**Sources:**\n* None (Information not available in the provided context)",
+    "chunk_ids": [
+      184,
+      164,
+      139,
+      168
+    ],
+    "answer_relevance": 0.7,
+    "context_relevance": 0.0,
+    "groundedness": 0.0
+  },
+  {
+    "topic": "not_in_documents",
+    "question": "What is the best hawker centre in Singapore?",
+    "answer": "I don't know. The provided context does not contain information about hawker centres in Singapore. You can check the official National Environment Agency (NEA) website (https://www.nea.gov.sg) or VisitSingapore for details on popular hawker centres.\n\n**Sources:**\n- None (Information not available in the provided context)",
+    "chunk_ids": [
+      188,
+      57,
+      161,
+      168
+    ],
+    "answer_relevance": 0.7,
+    "context_relevance": 0.0,
+    "groundedness": 0.0
+  }
+]
