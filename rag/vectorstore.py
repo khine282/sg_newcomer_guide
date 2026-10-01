@@ -16,7 +16,9 @@ BATCH_SIZE = 50
 # Local multilingual model (Ollama), so English and Burmese questions land
 # close together. We used Gemini's embeddings before, but the free tier only
 # allows 1000 per day - not enough to try several index types.
-# num_gpu=0: see the CUDA note in eval/rag_triad.py.
+# num_gpu=0 keeps it on the CPU: the 6 GB GPU can't hold both this and the
+# eval judge, so Ollama would keep swapping them. On the CPU, embedding a
+# question still takes well under a second once loaded.
 embedding = OllamaEmbeddings(model="bge-m3", num_gpu=0)
 
 

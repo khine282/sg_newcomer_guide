@@ -25,9 +25,10 @@ QUESTIONS_FILE = EVAL_DIR / "questions.yaml"
 RESULTS_DIR = EVAL_DIR / "results"
 
 JUDGE_MODEL = "qwen3:8b"
-# num_gpu=0 runs on the CPU: the GPU fails with a CUDA error on the current
-# NVIDIA driver (546.18). After a driver update, remove it to use the GPU.
-judge_llm = ChatOllama(model=JUDGE_MODEL, temperature=0, reasoning=False, num_gpu=0)
+# Runs on the GPU (about 5x faster than CPU: ~4s instead of ~23s per grade).
+# On NVIDIA driver 546.18 the GPU gave a CUDA error, so we used num_gpu=0
+# (CPU only) until updating the driver to 617.14.
+judge_llm = ChatOllama(model=JUDGE_MODEL, temperature=0, reasoning=False)
 
 # Pause between questions so the chatbot stays under Gemini's per-minute limit.
 DELAY_SECONDS = 10
@@ -101,7 +102,7 @@ def evaluate(chain, name):
         rows.append(row)
         print(f"[{i + 1}/{len(questions)}] ans {row['answer_relevance']:.2f} | "
               f"ctx {row['context_relevance']:.2f} | grd {row['groundedness']:.2f} | "
-              f"{q['question'][:50]}")
+              f"{q['question'][:50]}", flush=True)
 
     RESULTS_DIR.mkdir(exist_ok=True)
     path = RESULTS_DIR / f"{name}.json"
