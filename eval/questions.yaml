@@ -1,0 +1,28 @@
+# Test questions for evaluating the chatbot (Course 3: RAG triad).
+# Mix of topics, English and Burmese, plus questions our documents can't answer
+# (a good chatbot should say "I don't know" for those).
+
+- question: How much annual leave do employees get?
+  topic: work
+- question: How many hours a week can I be asked to work?
+  topic: work
+- question: When must my employer pay my salary?
+  topic: work
+- question: What happens if my employer does not pay CPF contributions?
+  topic: cpf
+- question: How can I pay for bus and MRT rides?
+  topic: transport
+- question: Can a foreigner rent an HDB flat?
+  topic: housing
+- question: How much does a consultation at a polyclinic cost?
+  topic: healthcare
+- question: စင်ကာပူမှာ ဘဏ်အကောင့် ဘယ်လိုဖွင့်ရမလဲ  # How do I open a bank account in Singapore?
+  topic: tips
+- question: CPF ဆိုတာ ဘာလဲ  # What is CPF?
+  topic: cpf
+- question: HDB အိမ်ငှားဖို့ ဘာတွေလိုအပ်လဲ  # What do I need to rent an HDB flat?
+  topic: housing
+- question: How do I apply for Singapore citizenship?
+  topic: not_in_documents
+- question: What is the best hawker centre in Singapore?
+  topic: not_in_documents
