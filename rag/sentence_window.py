@@ -9,7 +9,7 @@ import json
 import re
 
 from langchain_core.documents import Document
-from langchain_core.runnables import RunnableLambda
+from langchain_core.retrievers import BaseRetriever
 
 from ingest.load_all import OUTPUT_FILE as DOCUMENTS_FILE
 from rag.vectorstore import build_vectorstore, get_vectorstore
@@ -83,10 +83,23 @@ def replace_with_windows(docs, k):
     return results
 
 
+class SentenceWindowRetriever(BaseRetriever):
+    """Search sentences, then return the windows around the best k of them.
+
+    A real BaseRetriever (not `search | RunnableLambda`), because
+    create_retrieval_chain only passes the question text to BaseRetrievers;
+    anything else gets the whole {"input": ...} dict.
+    """
+    k: int = 4
+    fetch_k: int = 12
+
+    def _get_relevant_documents(self, query, *, run_manager):
+        docs = get_vectorstore(COLLECTION_NAME).similarity_search(query, k=self.fetch_k)
+        return replace_with_windows(docs, self.k)
+
+
 def get_sentence_window_retriever(k=4, fetch_k=12):
-    """Search sentences, then return the windows around the best k of them."""
-    search = get_vectorstore(COLLECTION_NAME).as_retriever(search_kwargs={"k": fetch_k})
-    return search | RunnableLambda(lambda docs: replace_with_windows(docs, k))
+    return SentenceWindowRetriever(k=k, fetch_k=fetch_k)
 
 
 if __name__ == "__main__":
