@@ -13,3 +13,4 @@ langchain-chroma
 langchain-google-genai
 lark
 langchain-ollama
+streamlit
