@@ -1,0 +1,108 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+Myanmar:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body { width: 1200px; background: #f7f8fa; font-family: Inter, sans-serif; color: #1d2330; padding: 48px 56px; }
+  h1 { font-size: 40px; font-weight: 800; letter-spacing: -0.5px; }
+  .sub { font-size: 19px; color: #5a6475; margin-top: 8px; }
+  .legend { display: flex; gap: 22px; margin-top: 20px; font-size: 16px; color: #3a4252; }
+  .legend span { display: inline-flex; align-items: center; gap: 8px; }
+  .dot { width: 16px; height: 16px; border-radius: 4px; display: inline-block; }
+  .local { background: #e6f4ea; border: 2px solid #2e8b57; }
+  .cloud { background: #e8f0fe; border: 2px solid #3b6fd8; }
+  .plain { background: #fff; border: 2px solid #c9ced8; }
+  .deploy { background: #fdf3e7; border: 2px solid #c9711c; }
+  .deploy .tag { background: #c9711c; color: #fff; }
+  section { margin-top: 34px; background: #fff; border: 1px solid #e1e4ea; border-radius: 18px; padding: 26px 28px 28px; }
+  .label { font-size: 15px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #8a93a3; margin-bottom: 18px; }
+  .label b { color: #1d2330; }
+  .row { display: flex; align-items: stretch; gap: 0; }
+  .box { flex: 1; border-radius: 12px; padding: 14px 14px; font-size: 15.5px; line-height: 1.4; }
+  .box h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+  .box small { display: block; color: #4a5263; font-size: 14px; }
+  .arrow { width: 34px; flex: none; display: flex; align-items: center; justify-content: center; color: #9aa2b1; font-size: 26px; font-weight: 700; }
+  .tag { display: table; font-size: 12px; font-weight: 700; padding: 2px 7px; border-radius: 6px; margin-top: 8px; }
+  .local .tag { background: #2e8b57; color: #fff; }
+  .cloud .tag { background: #3b6fd8; color: #fff; }
+  .my { font-family: 'Noto Sans Myanmar', sans-serif; }
+  .scores { display: flex; gap: 14px; margin-top: 4px; }
+  table { width: 100%; border-collapse: collapse; font-size: 16px; margin-top: 16px; }
+  th, td { padding: 9px 12px; text-align: left; border-bottom: 1px solid #e8eaef; }
+  th { color: #6a7384; font-weight: 600; font-size: 14px; }
+  td.best { font-weight: 800; color: #2e8b57; }
+  .foot { margin-top: 22px; font-size: 15px; color: #6a7384; line-height: 1.6; }
+</style></head>
+<body>
+  <h1>SG Newcomer Guide: how it works</h1>
+  <div class="sub">A RAG system answering "living in Singapore" questions in English &amp; Burmese, from official sources only.</div>
+  <div class="legend">
+    <span><i class="dot local"></i> Open-source models (free, no API)</span>
+    <span><i class="dot cloud"></i> Cloud LLM (Gemini free tier)</span>
+    <span><i class="dot deploy"></i> Deployment (Docker, Hugging Face)</span>
+    <span><i class="dot plain"></i> Python / LangChain</span>
+  </div>
+
+  <section>
+    <div class="label"><b>1 · Build the knowledge base</b> &nbsp;(once)</div>
+    <div class="row">
+      <div class="box plain"><h3>Sources</h3>3 MOM / CPF PDFs<br>4 gov web pages<br>2 YouTube videos<br>Notion tips page</div>
+      <div class="arrow">→</div>
+      <div class="box local"><h3>Load</h3>PDF, web &amp; Notion loaders<br>Video → Whisper transcript<br><small>+ metadata: agency, topic, URL</small><span class="tag">WHISPER · LOCAL</span></div>
+      <div class="arrow">→</div>
+      <div class="box plain"><h3>Split</h3>1000-char chunks, 150 overlap<br><small>or single sentences (for sentence-window)</small></div>
+      <div class="arrow">→</div>
+      <div class="box local"><h3>Embed</h3>bge-m3 multilingual<br><small>English &amp; Burmese land close together</small><span class="tag">BGE-M3 · CPU</span></div>
+      <div class="arrow">→</div>
+      <div class="box plain"><h3>Chroma</h3>198 chunks<br>914 sentences</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="label"><b>2 · Answer a question</b> &nbsp;(every message, also in the live demo)</div>
+    <div class="row">
+      <div class="box plain"><h3>Question</h3>"How much annual leave do I get?"<br><span class="my">"CPF ဆိုတာ ဘာလဲ"</span></div>
+      <div class="arrow">→</div>
+      <div class="box cloud"><h3>Rewrite</h3>Follow-ups become standalone questions using chat memory<span class="tag">GEMINI</span></div>
+      <div class="arrow">→</div>
+      <div class="box local"><h3>Retrieve</h3>Embed question, search Chroma<br><small>MMR or sentence-window → top 4</small><span class="tag">BGE-M3 · CPU</span></div>
+      <div class="arrow">→</div>
+      <div class="box cloud"><h3>Answer</h3>Only from the context, same language, cite sources, else "I don't know"<br><small>fallback across 4 Gemini models</small><span class="tag">GEMINI</span></div>
+      <div class="arrow">→</div>
+      <div class="box plain"><h3>Reply</h3>Answer + agency &amp; URL for every source</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="label"><b>3 · Evaluate</b> &nbsp;(RAG triad, LLM-as-judge)</div>
+    <div class="row">
+      <div class="box plain"><h3>12 test questions</h3>English &amp; Burmese, 6 topics, + 2 the documents can't answer</div>
+      <div class="arrow">→</div>
+      <div class="box plain"><h3>Run the pipeline</h3>Baseline (MMR) vs sentence-window retrieval</div>
+      <div class="arrow">→</div>
+      <div class="box local" style="flex:1.3"><h3>Judge: qwen3:8b</h3>Scores 0–1 for answer relevance, context relevance, groundedness<br><small>~35 min on CPU → ~9 min on GPU</small><span class="tag">OLLAMA · LOCAL GPU</span></div>
+    </div>
+    <table>
+      <tr><th>Retriever</th><th>Answer relevance</th><th>Context relevance</th><th>Groundedness</th></tr>
+      <tr><td>Baseline (MMR, 1000-char chunks)</td><td class="best">0.94</td><td>0.35</td><td class="best">0.81</td></tr>
+      <tr><td>Sentence-window (±3 sentences)</td><td>0.88</td><td class="best">0.48</td><td>0.65</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <div class="label"><b>4 · Deploy</b> &nbsp;(live on Hugging Face Spaces)</div>
+    <div class="row">
+      <div class="box deploy"><h3>Docker image</h3>App + CPU-only PyTorch<br><small>bge-m3 baked in at build time, prebuilt Chroma index shipped</small><span class="tag">DOCKER</span></div>
+      <div class="arrow">→</div>
+      <div class="box deploy"><h3>Upload script</h3>Allowlist of files, one commit<br><small>refuses .env; Gemini key stored as a Space secret</small><span class="tag">HF HUB API</span></div>
+      <div class="arrow">→</div>
+      <div class="box deploy"><h3>Hugging Face Space</h3>Streamlit app<br><small>free CPU, 16 GB RAM; sleeps after 48 h idle</small><span class="tag">HF SPACE</span></div>
+      <div class="arrow">→</div>
+      <div class="box plain"><h3>Guardrails</h3>8 questions per visitor, 30 per day<br><small>protects the free-tier quota; friendly message if every model fails</small></div>
+      <div class="arrow">→</div>
+      <div class="box plain"><h3>Logging</h3>Language, latency, sources, errors<br><small>never the question text</small></div>
+    </div>
+  </section>
+
+  <div class="foot"><div>Built with LangChain · Chroma · sentence-transformers · Gemini · Ollama (judge) · Streamlit · Docker · Hugging Face Spaces</div><div>After DeepLearning.AI: LangChain Chat with Your Data + Building &amp; Evaluating Advanced RAG</div></div>
+</body></html>
