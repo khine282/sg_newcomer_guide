@@ -10,3 +10,4 @@ data/indexes/
 default.sqlite
 # LinkedIn post assets
 docs/linkedin_card.*
+docs/demo_raw.*
