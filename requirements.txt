@@ -14,3 +14,6 @@ langchain-google-genai
 lark
 langchain-ollama
 streamlit
+langchain-huggingface
+sentence-transformers
+huggingface_hub

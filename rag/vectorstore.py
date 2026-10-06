@@ -2,24 +2,31 @@ import json
 
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
-from langchain_ollama import OllamaEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 
 from ingest.load_pdf import DATA_DIR
-from ingest.split_documents import OUTPUT_FILE as CHUNKS_FILE
 
+# Same path as ingest.split_documents.OUTPUT_FILE. Not imported from there,
+# so the web app doesn't pull in the video/web loaders and their packages.
+CHUNKS_FILE = DATA_DIR / "processed" / "chunks.jsonl"
 PERSIST_DIR = DATA_DIR / "chroma"
 COLLECTION_NAME = "sg_newcomer_guide"
 
 # Batches only so we can print progress.
 BATCH_SIZE = 50
 
-# Local multilingual model (Ollama), so English and Burmese questions land
-# close together. We used Gemini's embeddings before, but the free tier only
-# allows 1000 per day - not enough to try several index types.
-# num_gpu=0 keeps it on the CPU: the 6 GB GPU can't hold both this and the
-# eval judge, so Ollama would keep swapping them. On the CPU, embedding a
-# question still takes well under a second once loaded.
-embedding = OllamaEmbeddings(model="bge-m3", num_gpu=0)
+# Local multilingual model, so English and Burmese questions land close
+# together. We used Gemini's embeddings before, but the free tier only allows
+# 1000 per day - not enough to try several index types.
+# Same bge-m3 model we ran in Ollama, but loaded with sentence-transformers so
+# it also runs on the deployed app, where there is no Ollama.
+# On the CPU so the GPU stays free for the eval judge; embedding a question
+# still takes well under a second once the model is loaded.
+embedding = HuggingFaceEmbeddings(
+    model_name="BAAI/bge-m3",
+    model_kwargs={"device": "cpu"},
+    encode_kwargs={"normalize_embeddings": True},
+)
 
 
 def load_chunks(path=CHUNKS_FILE):
