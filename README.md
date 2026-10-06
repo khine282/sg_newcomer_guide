@@ -1,17 +1,36 @@
 # SG Newcomer Guide
 
-A multilingual (English/Burmese) RAG chatbot answering practical
-"living in Singapore" questions (work, CPF, housing, transport, healthcare)
-from official sources. It cites its sources and says "I don't know" when the
-documents don't cover the question.
+**Ask about life in Singapore in English or Burmese, and get answers from
+official government sources, with citations.**
 
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-RAG-1C3C3C?logo=langchain&logoColor=white)
+![Chroma](https://img.shields.io/badge/Chroma-vector%20DB-FF6F00)
+![Ollama](https://img.shields.io/badge/Ollama-bge--m3%20%7C%20qwen3-000000?logo=ollama&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini-LLM-8E75B2?logo=googlegemini&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-app-FF4B4B?logo=streamlit&logoColor=white)
+
+- **End-to-end RAG pipeline:** ingests PDFs, government web pages, YouTube
+  videos (transcribed with Whisper) and Notion notes, then answers with cited
+  sources or says "I don't know"
+- **Multilingual:** local `bge-m3` embeddings let a Burmese question find
+  English documents, and answers come back in the language of the question
+- **Measured, not guessed:** a RAG-triad evaluation (12 questions, local LLM
+  judge) compares the baseline with sentence-window retrieval.
+  [See the results](#results), including where the "advanced" method lost
+- **Practical engineering:** works within the Gemini free tier (fallback
+  models, batching, and local models for embeddings and the judge), with chat
+  memory and a Streamlit UI that shows the retrieved chunks
+
+![How it works](docs/workflow.png)
+
+A multilingual (English/Burmese) RAG chatbot answering practical
+"living in Singapore" questions (work, CPF, housing, transport, healthcare).
 Learning project built after DeepLearning.AI's
 "LangChain Chat with Your Data" and
 "Building and Evaluating Advanced RAG" courses.
 
-⚠️ Learning project. Always confirm information on the official websites.
-
-![How it works](docs/workflow.png)
+⚠️ Always confirm information on the official websites.
 
 
 ## Why
