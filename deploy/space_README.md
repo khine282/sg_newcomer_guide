@@ -1,6 +1,6 @@
 ---
 title: SG Newcomer Guide
-emoji: 🇸🇬
+emoji: 🏙️
 colorFrom: red
 colorTo: gray
 sdk: docker
