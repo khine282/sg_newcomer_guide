@@ -5,6 +5,8 @@ official government sources, with citations.**
 
 **[▶ Try the live demo](https://huggingface.co/spaces/kZarT/sg-newcomer-guide)** (Hugging Face Space; may take a few minutes to wake up)
 
+![Demo: English and Burmese questions, sources, and an honest "I don't know"](docs/demo.gif)
+
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-RAG-1C3C3C?logo=langchain&logoColor=white)
 ![Chroma](https://img.shields.io/badge/Chroma-vector%20DB-FF6F00)
