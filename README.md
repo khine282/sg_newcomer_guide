@@ -3,6 +3,8 @@
 **Ask about life in Singapore in English or Burmese, and get answers from
 official government sources, with citations.**
 
+**[▶ Try the live demo](https://huggingface.co/spaces/kZarT/sg-newcomer-guide)** (Hugging Face Space; may take a few minutes to wake up)
+
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-RAG-1C3C3C?logo=langchain&logoColor=white)
 ![Chroma](https://img.shields.io/badge/Chroma-vector%20DB-FF6F00)
