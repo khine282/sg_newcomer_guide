@@ -11,6 +11,9 @@ ENV HOME=/home/user \
     PYTHONUNBUFFERED=1
 WORKDIR /home/user/app
 
+# The base image's old pip rejects some wheels on the PyTorch index
+# ("inconsistent Name"), so upgrade it first.
+RUN pip install --no-cache-dir --upgrade pip
 # CPU-only torch: the default (CUDA) build is several GB bigger.
 RUN pip install --no-cache-dir torch==2.14.0 --index-url https://download.pytorch.org/whl/cpu
 COPY --chown=user requirements.txt .
