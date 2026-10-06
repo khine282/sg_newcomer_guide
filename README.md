@@ -6,7 +6,8 @@ official government sources, with citations.**
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-RAG-1C3C3C?logo=langchain&logoColor=white)
 ![Chroma](https://img.shields.io/badge/Chroma-vector%20DB-FF6F00)
-![Ollama](https://img.shields.io/badge/Ollama-bge--m3%20%7C%20qwen3-000000?logo=ollama&logoColor=white)
+![Hugging Face](https://img.shields.io/badge/Hugging%20Face-bge--m3%20%7C%20Space-FFD21E?logo=huggingface&logoColor=black)
+![Ollama](https://img.shields.io/badge/Ollama-qwen3%20judge-000000?logo=ollama&logoColor=white)
 ![Gemini](https://img.shields.io/badge/Gemini-LLM-8E75B2?logo=googlegemini&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-app-FF4B4B?logo=streamlit&logoColor=white)
 
@@ -65,8 +66,10 @@ No GPU needed. Everything runs on the CPU; a GPU only makes evaluation faster.
 ### 1. Install
 
 You need [Python 3.10+](https://www.python.org/),
-[Ollama](https://ollama.com/), [ffmpeg](https://ffmpeg.org/) (for the video
-transcripts) and a free [Gemini API key](https://aistudio.google.com/apikey).
+[ffmpeg](https://ffmpeg.org/) (for the video transcripts), a free
+[Gemini API key](https://aistudio.google.com/apikey) and, for the
+evaluation only, [Ollama](https://ollama.com/). The `bge-m3` embedding model
+(~2.2 GB) downloads automatically the first time.
 
 ```powershell
 git clone https://github.com/khine282/sg_newcomer_guide.git
@@ -75,8 +78,7 @@ python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
 
-ollama pull bge-m3      # embeddings
-ollama pull qwen3:8b    # evaluation judge (only needed for step 4)
+ollama pull qwen3:8b    # evaluation judge (only needed for step 5)
 
 copy .env.example .env  # then put your Gemini key in .env
 ```
@@ -183,7 +185,8 @@ One phase per branch and pull request.
 
 ### Phase 3: Embeddings and vector store
 - Chroma vector store
-- Started with Gemini embeddings, then switched to local `bge-m3` (Ollama):
+- Started with Gemini embeddings, then switched to local `bge-m3` (first in
+  Ollama, later with `sentence-transformers` so it also runs when deployed):
   the free tier allows only 1000 embeddings per day, not enough to rebuild
   indexes while experimenting
 - Duplicated the CPF PDF on purpose (like the course) to show similarity
